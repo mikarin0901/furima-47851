@@ -7,7 +7,7 @@ class Item < ApplicationRecord
   belongs_to :shipping_fee_status
   belongs_to :prefecture
   belongs_to :scheduled_delivery
-  has_one :order
+
   has_one_attached :image
 
   validates :image, :name, :info, presence: true
