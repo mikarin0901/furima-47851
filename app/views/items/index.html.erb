@@ -131,7 +131,7 @@
       <% if @items.any? %>
        <% @items.each do |item| %>
       <li class='list'>
-        <%= link_to "#" do %>
+        <%= link_to item_path(item) do %>
         <div class='item-img-content'>
          <%= image_tag item.image, class: "item-img" %>
 
@@ -166,7 +166,7 @@
               <%= image_tag "star.png", class:"star-icon" %>
               <span class='star-count'>0</span>
             </div>
-          </div>
+          </div>t
         </div>
         <% end %>
       </li>
