@@ -23,5 +23,4 @@ const calculatePrice = () => {
   })
 }
 
-document.addEventListener("turbo:load", calculatePrice)
-document.addEventListener("turbo:render", calculatePrice)
+window.addEventListener("load", calculatePrice)
