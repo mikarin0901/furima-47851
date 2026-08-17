@@ -2,16 +2,13 @@ require 'rails_helper'
 
 RSpec.describe OrderShippingAddress, type: :model do
   before do
-    @order_shipping_address = OrderShippingAddress.new(
-      user_id: 1,
-      item_id: 1,
-      postal_code: '123-4567',
-      prefecture_id: 2,
-      city: '松山市',
-      addresses: '朝生田町1-2-3',
-      building: 'テストマンション101',
-      phone_number: '09012345678',
-      token: 'tok_abcdefghijk00000000000000000'
+    @user = FactoryBot.build_stubbed(:user)
+    @item = FactoryBot.build_stubbed(:item)
+
+    @order_shipping_address = FactoryBot.build(
+      :order_shipping_address,
+      user_id: @user.id,
+      item_id: @item.id
     )
   end
 
